@@ -7,8 +7,6 @@ class accueilController {
     }
 
     public function accueil() {
-        $accueilModel = new accueilModel();
-        $accueil = $accueilModel->getAccueil();
         include_once('Views/accueilView.php');
     }
 

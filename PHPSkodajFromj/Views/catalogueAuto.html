@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Skoda 2.0</title>
+   <meta name="description" content="DESCRIPTION">
+   <link rel="stylesheet" href="../Css/style.css">
+   <script src="../Js/script.js" defer></script>
+   <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer></script>
+</head>
+<body>
+
+   <header>
+      <nav>
+         <span><a href="accueilView.html">
+             <img src="../Assets/logo-skoda.png" alt="logo" height="25px">
+            </a>
+            </span>
+         <ul>
+            <li><a href="accueilView.html">Accueil</a></li>
+            <li>
+               <div class="dropdown-menu">
+                  <button class="dropdown-btn">Nos Catalogues &#11167;</button>
+                  <div class="dropdown-content">
+                     <a href="catalogueAuto.html">Nos Voitures</a>
+                     <a href="cataloguePiece">Nos Pièces détachées</a>
+                  </div>
+               </div>
+            </li>
+            <li><a href="">Nous contacter</a></li>
+            <li><a href="">Skoda &amp; Vous</a></li>
+         </ul>
+      </nav>
+   </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Catalogue skoda</h1>
+
+    <br>
+    <br>
+
+
+    <body x-data="loadCars()">
+
+        <div x-cloak>
+            <input
+                x-ref="searchField"
+                x-model="search"
+                placeholder="Rechercher par marque ou modèle..."
+                type="search"
+                class = "search"
+            />
+
+            <div>
+                <label class="sort" for="sort">Trier par :</label>
+                <select
+                    x-model="sortOption"
+                    class="sort-option"
+                >
+                    <option value="default">Par défaut</option>
+                    <option value="marque">Marque</option>
+                    <option value="modele">Modèle</option>
+                    <option value="prixCroissant">Prix croissant</option>
+                    <option value="prixDecroissant">Prix décroissant</option>
+                    <option value="stockCroissant">Stock croissant</option>
+                    <option value="stockDecroissant">Stock décroissant</option>
+                </select>
+            </div>
+
+            <div class="catalog-grid">
+                <template x-for="car in sortedCars" :key="car.id">
+                    <div
+                        class="catalog-item"
+                    >
+                        <div class="catalog-item-image">
+                            <img
+                                :src="car.image"
+                                :alt="car.marque + ' ' + car.modele"
+                            />
+                            <p
+                                class="catalog-item-text"
+                                x-text="car.marque + ' ' + car.modele"
+                            ></p>
+                            <p>Prix : <strong x-text="car.prix"></strong> €</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <script>
+            function loadCars() {
+                return {
+                    search: '',
+                    sortOption: 'default',
+                    cars: [
+                        {
+                            id: 1,
+                            marque: 'Skoda',
+                            modele: 'Octavia',
+                            prix: 20000,
+                            image: '../Assets/skoda/skoda_octavia/Default_bp576_1.webp'
+                        },
+                        {
+                            id: 2,
+                            marque: 'Skoda',
+                            modele: 'Kamiq',
+                            prix: 15000,
+                            image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp'
+                        },
+                        {
+                            id: 3,
+                            marque: 'Skoda',
+                            modele: 'Fabia',
+                            prix: 10000,
+                            image: '../Assets/skoda/skoda_fabia/fabiaCarous.png'
+                        },
+                        {
+                            id: 4,
+                            marque: 'Skoda',
+                            modele: 'Scala',
+                            prix: 12000,
+                            image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png'
+                        },
+                    ],
+                    get sortedCars() {
+                        function compare(a, b) {
+                            if (a.marque < b.marque) {
+                                return -1;
+                            }
+                            if (a.marque > b.marque) {
+                                return 1;
+                            }
+                            return 0;
+                        }
+
+                        switch (this.sortOption) {
+                            case 'marque':
+                                return this.cars.sort(compare);
+                            case 'modele':
+                                return this.cars.sort(compare);
+                            case 'prixCroissant':
+                                return this.cars.sort((a, b) => a.prix - b.prix);
+                            case 'prixDecroissant':
+                                return this.cars.sort((a, b) => b.prix - a.prix);
+                            
+                            default:
+                                return this.cars;
+                        }
+                    }
+                }
+            }
+        </script>
+
+    >
+                        <option value="default">Par défaut</option>
+                        <option value="marque">Marque</option>
+                        <option value="modele">Modèle</option>
+                        <option value="prixCroissant">Prix croissant</option>
+                        <option value="prixDecroissant">Prix décroissant</option>
+                        <option value="stockCroissant">Stock croissant</option>
+                        <option value="stockDecroissant">Stock décroissant</option>
+                    </select>
+                </div>
+
+                <div class="catalog-grid">
+                    <template x-for="car in sortedCars" :key="car.id">
+                        <div
+                            class="catalog-item"
+                        >
+                            <div class="catalog-item-image">
+                                <img
+                                    :src="car.image"
+                                    :alt="car.marque + ' ' + car.modele"
+                                />
+                                <p
+                                    class="catalog-item-text"
+                                    x-text="car.marque + ' ' + car.modele"
+                                ></p>
+                                <p>Prix : <strong x-text="car.prix"></strong> €</p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <script>
+                function loadCars() {
+                    return {
+                        search: '',
+                        sortOption: 'default',
+                        cars: [
+                            {
+                                id: 1,
+                                marque: 'Skoda',
+                                modele: 'Octavia',
+                                prix: 20000,
+                                image: '../Assets/skoda/skoda_octavia/Default_bp576_1.webp'
+                            },
+                            {
+                                id: 2,
+                                marque: 'Skoda',
+                                modele: 'Kamiq',
+                                prix: 15000,
+                                image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp'
+                            },
+                            {
+                                id: 3,
+                                marque: 'Skoda',
+                                modele: 'Fabia',
+                                prix: 10000,
+                                image: '../Assets/skoda/skoda_fabia/fabiaCarous.png'
+                            },
+                            {
+                                id: 4,
+                                marque: 'Skoda',
+                                modele: 'Scala',
+                                prix: 12000,
+                                image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png'
+                            },
+                        ],
+                        get sortedCars() {
+                            function compare(a, b) {
+                                if (a.marque < b.marque) {
+                                    return -1;
+                                }
+                                if (a.marque > b.marque) {
+                                    return 1;
+                                }
+                                return 0;
+                            }
+
+                            switch (this.sortOption) {
+                                case 'marque':
+                                    return this.cars.sort(compare);
+                                case 'modele':
+                                    return this.cars.sort(compare);
+                                case 'prixCroissant':
+                                    return this.cars.sort((a, b) => a.prix - b.prix);
+                                case 'prixDecroissant':
+                                    return this.cars.sort((a, b) => b.prix - a.prix);
+                                
+                                default:
+                                    return this.cars;
+                            }
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </body>

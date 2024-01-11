@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Catalog</title>
+  <style>
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    section > div {
+      width: 22%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .info-button {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-top: 10px;
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Modèles de voitures</h1>
+
+  <section>
+    <div>
+      <img src="toyota_camry.jpg" alt="Toyota Camry">
+      <h2>Fabia</h2>
+      <p>Une voiture fiable et économique.</p>
+      <a href="product_page.php?model=toyota_camry" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="ford_mustang.jpg" alt="Ford Mustang">
+      <h2>kamiq</h2>
+      <p>Une voiture sportive et élégante.</p>
+      <a href="product_page.php?model=ford_mustang" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="honda_crv.jpg" alt="Honda CR-V">
+      <h2>octavia</h2>
+      <p>Un SUV spacieux et confortable.</p>
+      <a href="product_page.php?model=honda_crv" class="info-button">Plus d'info</a>
+    </div>
+  </section>
+  <h1>Pièces Détachées</h1>
+
+  <section>
+    <div>
+      <img src="car_battery.jpg" alt="Batterie de Voiture">
+      <h2>Batterie de Voiture</h2>
+      <p>Puissante batterie pour assurer un démarrage fiable.</p>
+      <a href="product_page.php?part=battery" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="car_tires.jpg" alt="Pneus">
+      <h2>Pneus</h2>
+      <p>Pneus de haute qualité pour une conduite en toute sécurité.</p>
+      <a href="product_page.php?part=tires" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="car_brakes.jpg" alt="Freins">
+      <h2>Freins</h2>
+      <p>Ensemble de freins pour un arrêt efficace.</p>
+      <a href="product_page.php?part=brakes" class="info-button">Plus d'info</a>
+    </div>
+  </section>
+
+    <h1>Goodies</h1>
+  <section>
+    <div>
+      <img src="car_floor_mats.jpg" alt="Tapis de Voiture Personnalisé">
+      <h2>Tapis de Voiture Personnalisé</h2>
+      <p>Des tapis élégants pour l'intérieur de votre voiture.</p>
+      <a href="product_page.php?goodie=floor_mats" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="car_keychain.jpg" alt="Porte-clés">
+      <h2>Porte-clés</h2>
+      <p>Porte-clés avec le logo de votre modèle de voiture préféré.</p>
+      <a href="product_page.php?goodie=keychain" class="info-button">Plus d'info</a>
+    </div>
+    <div>
+      <img src="car_cup_holder.jpg" alt="Tasse isotherme">
+      <h2>Tasse isotherme</h2>
+      <p>Une tasse pour vos boissons pendant vos déplacements.</p>
+      <a href="product_page.php?goodie=cup_holder" class="info-button">Plus d'info</a>
+    </div>
+  </section>
+
+</body>
+</html>

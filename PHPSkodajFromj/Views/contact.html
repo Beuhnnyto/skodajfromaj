@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Skoda 2.0</title>
+   <meta name="description" content="DESCRIPTION">
+   <link rel="stylesheet" href="../Css/style.css">
+   <script src="../Js/script.js" defer></script>
+   <script src="../Js/app.js" async></script>
+</head>
+<body>
+
+   <header>
+      <nav>
+         <span><a href="accueilView.html">
+             <img src="../Assets/logo-skoda.png" alt="logo" height="25px">
+            </a>
+            </span>
+         <ul>
+            <li><a href="accueilView.html">Accueil</a></li>
+            <li>
+               <div class="dropdown-menu">
+                  <button class="dropdown-btn">Nos Catalogues &#11167;</button>
+                  <div class="dropdown-content">
+                     <a href="catalogueAuto.html">Nos Voitures</a>
+                     <a href="cataloguePiece.html">Nos Pièces détachées</a>
+                  </div>
+               </div>
+            </li>
+            <li><a href="">Nous contacter</a></li>
+            <li><a href="">Skoda &amp; Vous</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Nous Contacter</h1>
+
+    <form>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email">
+
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone">
+
+        <label for="sujet">Sujet</label>
+        <select id="sujet" name="sujet">
+            <option value="Recrutement">Recrutement</option>
+            <option value="Service Apres Vente">Service Apres Vente</option>
+            <option value="autre">Autre</option>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message"></textarea>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, textarea {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+        }
+
+        select {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        select:hover {
+            background-color: #ddd;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #aaa;
+        }
+    </style>
+
+    <br>
+
+      
+<footer>
+    <p>&copy; vroumvroum. All rights reserved.</p>
+    <a href="https://maps.app.goo.gl/nqt5NLDLMV7Gi6Tk6" target="_blank" rel="noreferrer">Flat 5a, Mornington Avenue Mansions, Mornington Ave, London W14 8UW, Royaume-Uni</a>
+  </footer>
+  

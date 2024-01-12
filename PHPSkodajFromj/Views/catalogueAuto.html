@@ -174,15 +174,18 @@
                             class="catalog-item"
                         >
                             <div class="catalog-item-image">
-                                <img
+                                <a :href="car.lien">
+
+                                    <img
                                     :src="car.image"
                                     :alt="car.marque + ' ' + car.modele"
-                                />
-                                <p
+                                    />
+                                    <p
                                     class="catalog-item-text"
                                     x-text="car.marque + ' ' + car.modele"
-                                ></p>
-                                <p>Prix : <strong x-text="car.prix"></strong> €</p>
+                                    ></p>
+                                    <p>Prix : <strong x-text="car.prix"></strong> €</p>
+                                </a>
                             </div>
                         </div>
                     </template>
@@ -200,49 +203,57 @@
                                 marque: 'Skoda',
                                 modele: 'Octavia',
                                 prix: 20000,
-                                image: '../Assets/skoda/skoda_octavia/Default_bp576_1.webp'
+                                image: '../Assets/skoda/skoda_octavia/Default_bp576_1.webp',
+                                lien: "octavia.html"
                             },
                             {
                                 id: 2,
                                 marque: 'Skoda',
                                 modele: 'Kamiq',
                                 prix: 15000,
-                                image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp'
+                                image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp',
+                                lien: "kamiq.html"
+
                             },
                             {
                                 id: 3,
                                 marque: 'Skoda',
                                 modele: 'Fabia',
                                 prix: 10000,
-                                image: '../Assets/skoda/skoda_fabia/fabiaCarous.png'
+                                image: '../Assets/skoda/skoda_fabia/fabiaCarous.png',
+                                lien: "fabia.html"
                             },
                             {
                                 id: 4,
                                 marque: 'Skoda',
                                 modele: 'Scala',
                                 prix: 12000,
-                                image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png'
+                                image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png',
+                                lien: "scala.html"
                             },
                             {
                                 id: 2,
                                 marque: 'Skoda',
                                 modele: 'Kamiq',
                                 prix: 15000,
-                                image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp'
+                                image: '../Assets/skoda/skoda_kamiq/Default_bp576_1.webp',
+                                lien: "kamiq.html"
                             },
                             {
                                 id: 3,
                                 marque: 'Skoda',
                                 modele: 'Fabia',
                                 prix: 10000,
-                                image: '../Assets/skoda/skoda_fabia/fabiaCarous.png'
+                                image: '../Assets/skoda/skoda_fabia/fabiaCarous.png',
+                                lien: "fabia.html"
                             },
                             {
                                 id: 4,
                                 marque: 'Skoda',
                                 modele: 'Scala',
                                 prix: 12000,
-                                image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png'
+                                image: '../Assets/skoda/skoda_scala/ExteriorSideSmall.png',
+                                lien: "scala.html"
                             },
                         ],
                         get sortedCars() {

@@ -126,12 +126,13 @@ video {
     /* Les boutons sont absolument positionnés */
     z-index: 5;
     /* Ils sont placés au-dessus des autres éléments */
-    left: 10%;
+    left: 4%;
     /* La distance à gauche est de 10% */
-    right: 10%;
+    right: 4%;
     /* La distance à droite est de 10% */
     top: 50%;
     /* La distance du haut est de 50% */
+    border-color :#00000000;
     display: flex;
     /* Affiche les boutons en ligne */
     justify-content: space-between;
@@ -141,7 +142,7 @@ video {
 .carousel-controls button {
     padding: 10px;
     /* Ajout de padding pour un meilleur contrôle */
-    background-color: aquamarine;
+    background: rgba(76, 175, 79, 0)
     /* Arrière-plan en aquamarine */
 }
 /* Définition des points de contrôle */
@@ -154,7 +155,7 @@ video {
     /* La distance à gauche est de 50% */
     right: 50%;
     /* La distance à droite est de 50% */
-    bottom: 10%;
+    bottom: 5%;
     /*La distance du bas est de 10% */
     display: flex;
     /* Affiche les points en ligne */
@@ -173,12 +174,12 @@ video {
 /* Styles pour les points de navigation du carrousel */
 .carousel-dots .active {
     /* Border de 10px pour le point actif */
-    border: 10px solid #761530 !important;
+    border: 10px solid #0E3A2F !important;
     /* !important permet de surcharger les autres styles éventuels */
 }
 .carousel-dots .inactive {
     /* Border de 10px pour les points inactifs */
-    border: 10px solid #2596be;
+    border: 10px solid #000000;
 }
 
 .catalog-grid {
